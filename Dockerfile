@@ -2,10 +2,10 @@
 FROM openjdk:17-jdk-slim
 
 # Set work directory
-WORKDIR /Mavenapp
+WORKDIR /app
 
 # Copy the built JAR into the image
-COPY target/myapp-1.0-SNAPSHOT.jar
+COPY target/myapp-1.0-SNAPSHOT.jar app,jar
 
 # Command to run the JAR
 ENTRYPOINT ["java", "-jar", "app.jar"]
